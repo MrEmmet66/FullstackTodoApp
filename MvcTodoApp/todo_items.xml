@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TodoItems>
+  <TodoItem>
+    <Id>2</Id>
+    <Title>234234234</Title>
+    <IsDone>False</IsDone>
+    <CreatedAt>02.06.2024 20:01:09</CreatedAt>
+    <CompletedAt></CompletedAt>
+    <CategoryId>3</CategoryId>
+  </TodoItem>
+  <TodoItem>
+    <Id>3</Id>
+    <Title>фыфыв</Title>
+    <IsDone>false</IsDone>
+    <CreatedAt>2024-06-02T21:06:54.6175584+03:00</CreatedAt>
+    <CompletedAt />
+    <CategoryId>3</CategoryId>
+  </TodoItem>
+  <TodoItem>
+    <Id>5</Id>
+    <Title>фывфвы</Title>
+    <IsDone>false</IsDone>
+    <CreatedAt>2024-06-04T13:01:13.3962433+03:00</CreatedAt>
+    <CompletedAt>2024-06-05T00:00:00</CompletedAt>
+    <CategoryId />
+  </TodoItem>
+  <TodoItem>
+    <Id>6</Id>
+    <Title>фывфыв</Title>
+    <IsDone>false</IsDone>
+    <CreatedAt>2024-06-04T13:30:28.3004883+03:00</CreatedAt>
+    <CompletedAt />
+    <CategoryId>1</CategoryId>
+  </TodoItem>
+</TodoItems>

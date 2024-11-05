@@ -1,0 +1,42 @@
+.todo-form {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+	gap: 10px;
+  }
+  
+  .todo-form input[type="text"],
+  .todo-form input[type="date"],
+  .todo-form select {
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #555;
+	background-color: #222;
+	color: #ddd;
+	outline: none;
+  }
+  
+  .todo-form input[type="text"]:focus,
+  .todo-form input[type="date"]:focus,
+  .todo-form select:focus {
+	border-color: #007bff;
+  }
+  
+  .todo-form button[type='submit'] {
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	background-color: #007bff;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  .todo-form button[type='submit']:hover {
+	background-color: #0056b3;
+  }

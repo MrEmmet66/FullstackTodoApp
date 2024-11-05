@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TodoItems>
+  <TodoCategory>
+    <Id>1</Id>
+    <Name>Home</Name>
+  </TodoCategory>
+  <TodoCategory>
+    <Id>2</Id>
+    <Name>Business</Name>
+  </TodoCategory>
+  <TodoCategory>
+    <Id>3</Id>
+    <Name>Learning</Name>
+  </TodoCategory>
+</TodoItems>

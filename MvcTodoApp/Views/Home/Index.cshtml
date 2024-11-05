@@ -1,0 +1,51 @@
+﻿@using MvcTodoApp.Models.Entities
+@using MvcTodoApp.Utils
+@model MvcTodoApp.Models.ViewModels.MainPageViewModel
+
+@{
+ViewData["Title"] = "Home Page";
+}
+
+<div class="container text-center">
+    <h1 class="my-4">TodoApp</h1>
+    <form method="post" asp-controller="StorageType" asp-action="SetStorageType" class="mb-3">
+        <select name="storageType" asp-for="StorageType" onchange="this.form.submit()" class="form-select">
+            <option value="@StorageTypes.MsSqlDb">Database Storage</option>
+            <option value="@StorageTypes.XmlStorage">XML Storage</option>
+        </select>
+    </form>
+    <form method="post" asp-controller="Home" asp-action="AddTodoItem" class="mb-3">
+        <div class="input-group mb-3">
+            <input asp-for="NewTodoItem.Title" type="text" placeholder="Enter your new task" class="form-control"/>
+            <input asp-for="NewTodoItem.CompletedAt" type="date" placeholder="End of your task" class="form-control"/>
+            <select asp-for="NewTodoItem.Category.Id" class="form-select">
+                <option>Select Category</option>
+                @foreach (TodoCategory category in Model.TodoCategories)
+                {
+                <option value="@category.Id">@category.Name</option>
+                }
+            </select>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </form>
+    
+        @foreach(TodoItem item in Model.TodoItems)
+        {
+        <div class="col-sm-4">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <form method="post" asp-action="UpdateTodoItemStatus" class="d-flex align-items-center">
+                        <input name="isDone" asp-for="@item.IsDone" onchange="this.form.submit()" class="form-check-input me-3"/>
+                        <input type="hidden" name="id" asp-for="@item.Id"/>
+                        <div class="flex-grow-1">
+                            <h5 class="card-title">@item.Title</h5>
+                            <p class="card-text">@item.CompletedAt?.ToShortDateString()</p>
+                            <p class="card-text">@item.Category?.Name</p>
+                        </div>
+                        <a class="btn btn-danger" asp-action="RemoveTodoItem" asp-route-id="@item.Id">Remove</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
